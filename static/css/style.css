@@ -1,0 +1,137 @@
+body {
+    font-family: "Gill Sans", sans-serif;
+}
+  
+header {
+  background: url('https://source.unsplash.com/1600x900/?parking') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  border-bottom: 0.05ch solid #bdbdbc;
+}
+
+.navbar {
+  height: 80px;            
+  padding: 0 1rem;         
+  display: flex;
+  align-items: center;   
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-logo {
+  height: 165px;            
+  width: auto;
+  transition: transform 0.3s;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 600;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px; 
+  background-color: #FFF9E3;
+  transition: width 0.3s;
+  z-index: 1;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.offcanvas-body .nav-link {
+  color: #bdbdbc;               
+}
+
+.offcanvas-body .nav-link:hover,
+.offcanvas-body .nav-link.active {
+  color: #ffffff !important;    
+  background: rgba(255,255,255,0.1);
+  border-radius: 0.25rem;
+}
+
+.bg-secondary {
+  background-color: #495057 !important;
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+}
+.card-text {
+  font-size: 3ch;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 912px) {
+ .navbar {
+    height: 60px;
+    padding: 0 1rem;
+    overflow: visible;
+  }
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .nav-link::after {
+    display: none;
+
+  }
+
+  .navbar-logo {
+    height: 105px;
+    width: 115px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    align-self: center;
+    z-index: 5;
+  }
+
+  .navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  background: transparent !important;
+}
+  
+}

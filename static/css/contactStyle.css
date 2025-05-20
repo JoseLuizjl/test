@@ -1,0 +1,53 @@
+body {
+  font-family: "Gill Sans", sans-serif;
+  overflow: hidden;
+}
+
+.icon-car {
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.7));
+
+}
+
+.btn-parking {
+  border-color: #FFFAFA;
+  background-color:#FFFAFA;
+  color: #121212 !important;
+}
+
+.btn-parking:hover {
+  border-color: #f8eaea;
+  background-color:#f8eaea;
+}
+
+.btn-success {
+  background-color: #23c75fea !important;
+  border-color: #23c75f !important;
+}
+
+.btn-success:hover {
+  background-color: #1b9247 !important;
+  border-color: #1b9247 !important;
+  color: #FFFAFA;
+}
+  
+.text-whatsapp {
+  color: #23c75f !important;
+}
+
+.fw-bold {
+  color: #FFFAFA
+}
+
+.btn {
+  color: #FFFAFA
+}
+p {
+  color: #FFFAFA
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: visible;
+  }
+  
+}

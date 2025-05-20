@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car Wash Parking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/assets/images/carImage.png') }}">
+  </head>
+  <body class="bg-dark text-light">
+
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="{{ url_for('static', filename='assets/images/logo.png') }}"
+           alt="logo"
+           class="navbar-logo"/>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="/">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="/prices">Preços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contatos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header border-bottom border-secondary">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <ul class="navbar-nav text-center w-100 py-3">
+      <li class="nav-item mb-2"><a class="nav-link px-3 active" href="/">Início</a></li>
+      <li class="nav-item mb-2"><a class="nav-link px-3" href="/prices">Preços</a></li>
+      <li class="nav-item mb-2"><a class="nav-link px-3" href="#servicos">Serviços</a></li>
+      <li class="nav-item"><a class="nav-link px-3" href="/contact">Contatos</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <header class="py-5 text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Bem-vindo ao Car Wash Parking</h1>
+        <p class="lead">Seguro, prático e com o melhor preço da cidade!</p>
+      </div>
+    </header>
+
+    <section id="precos" class="py-5 bg-secondary text-light">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+          <h2 class="text-center text-md-start mb-3 mb-md-0">Tabela de Preços</h2>
+          <a href="/prices" class="btn btn-outline-light">
+          <i class="bi bi-tag-fill fa-1x me-2"></i> 
+          Ver todos Preços
+          </a>
+        </div>
+
+        
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-car-front fa-3x mb-3"></i>
+                <h5 class="card-title">Até 1 Hora</h5>
+                <p class="card-text">R$ 5,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-clock fa-3x mb-3"></i>
+                <h5 class="card-title">1 a 3 Horas</h5>
+                <p class="card-text">R$ 12,00</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100">
+              <div class="card-body text-center">
+                <i class="bi bi-calendar fa-3x mb-3"></i>
+                <h5 class="card-title">Diária</h5>
+                <p class="card-text">R$ 30,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section id="servicos" class="py-5 bg-dark text-light text-center">
+        <div class="container">
+          <i class="bi bi-shield-shaded fa-2x mb-2"></i>
+          <h5>Monitoramento 24h</h5>
+          <p>Segurança total para seu veículo.</p>
+        </div>
+      </section>
+      
+    <footer id="contato" class="py-4 bg-secondary text-center text-light">
+      <div class="container">
+        <h5>Contato</h5>
+        <p><i class="bi bi-telephone-fill me-2"></i>+55 (44) 999801-0011</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i>Rua José do Patrocínio, 232 - Maringá, PR</p>
+        <p>&copy; 2025 Car Wash Parking. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+

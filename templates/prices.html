@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Preços</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/prices.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/carImage.png') }}">
+  </head>
+
+  <body class="bg-dark text-light">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="{{ url_for('static', filename='assets/images/logo.png') }}"
+           alt="logo"
+           class="navbar-logo"/>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/prices">Preços</a></li>
+        <li class="nav-item"><a class="nav-link" href="/prices">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contatos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header border-bottom border-secondary">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <ul class="navbar-nav text-center w-100 py-3">
+      <li class="nav-item mb-2"><a class="nav-link px-3" href="/">Início</a></li>
+      <li class="nav-item mb-2"><a class="nav-link px-3 active" href="/prices">Preços</a></li>
+      <li class="nav-item mb-2"><a class="nav-link px-3" href="/prices">Serviços</a></li>
+      <li class="nav-item"><a class="nav-link px-3" href="/contact">Contatos</a></li>
+    </ul>
+  </div>
+</div>
+
+
+    <section id="prices" class="py-5 bg-secondary text-light">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="display-6 fw-bold">Nossos Preços</h2>
+          <p class="text-light-50">Escolha o plano que melhor atende você</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100 shadow-sm border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-clock-history fa-3x mb-3"></i>
+                <h5 class="card-title">Até 30 minutos</h5>
+                <p class="h4">R$ 6,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100 shadow-sm border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-hourglass-split fa-3x mb-3"></i>
+                <h5 class="card-title">Até 1 hora</h5>
+                <p class="h4">R$ 10,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100 shadow-sm border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-clock fa-3x mb-3"></i>
+                <h5 class="card-title">Acima de 1h (15 min)</h5>
+                <p class="h4">R$ 2,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100 shadow-sm border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-calendar-day fa-3x mb-3"></i>
+                <h5 class="card-title">Diária</h5>
+                <p class="h4">R$ 40,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100 shadow-sm border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-wallet2 fa-3x mb-3"></i>
+                <h5 class="card-title">Mensal (vaga)</h5>
+                <p class="h4">R$ 225,00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-white h-100 shadow-lg border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-people fa-3x mb-3"></i>
+                <h5 class="card-title">Convênio 3 vagas</h5>
+                <p class="h4"><strong>R$ 190,00</strong> / vaga</p>
+                <small>Total: R$ 570,00</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-white h-100 shadow-lg border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-people fa-3x mb-3"></i>
+                <h5 class="card-title">Convênio 6 vagas</h5>
+                <p class="h4"><strong>R$ 185,00</strong> / vaga</p>
+                <small>Total: R$ 1.110,00</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100 shadow-sm border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-file-earmark-text fa-3x mb-3"></i>
+                <h5 class="card-title">Convênio 50/50</h5>
+                <p class="card-text">Empresa e cliente dividem o valor mediante comprovante carimbado</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card bg-dark text-light h-100 shadow-sm border-0">
+              <div class="card-body text-center">
+                <i class="bi bi-file-earmark-text fa-3x mb-3"></i>
+                <h5 class="card-title">Convênio 100%</h5>
+                <p class="card-text">Empresa paga 100% mediante comprovante carimbado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="/" class="btn btn-outline-light btn-lg"><i class="bi bi-arrow-left-circle me-2"></i>Voltar</a>
+        </div>
+      </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
